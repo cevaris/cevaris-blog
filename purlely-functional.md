@@ -12,13 +12,21 @@ The global replacement of a function with its value, while preserving meaning of
 
 Pretend we define a function `foo` returns the string value `bar`.
 
-	scala> def foo() = "bar"
-	foo: ()String
+	scala> val foo = Array(1,2,3,4,5)
+	foo: Array[Int] = Array(1, 2, 3, 4, 5)
 
-	scala> foo()
-	res0: String = bar
+Now we want to do some transformation on the result of `foo`.
+
+	scala> val r1 = foo.reverse
+	r1: Array[Int] = Array(5, 4, 3, 2, 1)
+
+	scala> val r2 = foo.reverse
+	r2: Array[Int] = Array(5, 4, 3, 2, 1)
 	
-Now if we want to do some transformation on that
+Notice, calling reverse is consistent with every call for the given array `Array(5, 4, 3, 2, 1)`. 
+	
+	
+
 	
 
 	
